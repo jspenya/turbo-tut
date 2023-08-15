@@ -1,7 +1,8 @@
+<%= turbo_stream_from "quote" %>
 <main class="container">
   <%= link_to sanitize("&larr; Back to Quotes"), quotes_path %>
 
   <div class="header">
-    <h1><%= @quote.name %></h1>
+    <%= render "show_quote", quote: @quote %>
   </div>
 </main>
